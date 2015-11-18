@@ -1,0 +1,100 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>egjs-experiment::infiniteGridService</title>
+<meta name="viewport" content="initial-scale=1, maximum-scale=1, user-scalable=no">
+<link rel="stylesheet" href="../bower_components/Bootflat/css/site.min.css">
+<link rel="stylesheet" href="./css/demo.css">
+</head>
+<body style="background-color: #f1f2f6;">
+<div class="container">
+	<!-- navbar -->
+	<div class="row">
+		<div class="col-md-12">
+			<nav class="navbar navbar-inverse" role="navigation">
+				<div class="container-fluid">
+					<div class="navbar-header">
+						<button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-3">
+							<span class="sr-only">Toggle navigation</span>
+							<span class="icon-bar"></span>
+							<span class="icon-bar"></span>
+							<span class="icon-bar"></span>
+						</button>
+						<a class="navbar-brand" href="#">egjs-experiment</a>
+					</div>
+				</div>
+			</nav>
+		</div>
+	</div>
+	<!-- jumbotron -->
+	<div class="row">
+		<div class="col-md-12">
+			<div class="jumbotron">
+				<div class="jumbotron-contents">
+					<h2>Infinite Grid Service Demo</h2>
+					<p>This is a simple hero unit, a simple jumbotron-style component for calling extra attention to featured content or information.</p>
+				</div>
+			</div>
+		</div>
+	</div>
+	<!-- prepend alert -->
+	<div class="row">
+		<div class="col-md-12">
+			<div id="preppend-loading-bar" class="alert alert-info alert-dismissable" style="display:none">
+				<span class="glyphicon glyphicon-repeat" aria-hidden="true"></span> <strong>Well done!</strong> You successfully read this important alert message.
+			</div>
+		</div>
+	</div>
+	<!-- infinite grid -->
+	<div id="grid" class="row"></div>
+	<!-- append alert -->
+	<div class="row">
+		<div class="col-md-12">
+			<div id="append-loading-bar" class="alert alert-info alert-dismissable" style="display:none">
+				<span class="glyphicon glyphicon-repeat"></span> <strong>Well done!</strong> You successfully read this important alert message.
+			</div>
+		</div>
+	</div>
+	<!-- footer -->
+	<div class="row">
+		<div class="col-md-12">
+			<div class="footer">
+				<div class="container">
+					<div class="footer-copyright text-center">footer-copyright text-center</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+<script id="items-template" type="text/x-handlebars-template">
+	{{~#each items~}}
+	<div class="col-xs-6 col-sm-4 col-md-3 col-lg-2" data-offset="{{offset}}">
+		<div class="thumbnail">
+			<img class="img-rounded" src="{{imgSrc}}" />
+			<div class="caption">
+				<p><a href="{{href}}">{{desc}}</a></p>
+			</div>
+		</div>
+	</div>
+	{{~/each~}}
+</script>
+<script src="../bower_components/lodash/lodash.js"></script>
+<script src="../bower_components/jquery/jquery.js"></script>
+<script src="../bower_components/handlebars/handlebars.js"></script>
+<script src="../bower_components/hammerjs/hammer.js"></script>
+<script src="../bower_components/get-style-property/get-style-property.js"></script>
+<script src="../bower_components/get-size/get-size.js"></script>
+<script src="../bower_components/matches-selector/matches-selector.js"></script>
+<script src="../bower_components/eventEmitter/EventEmitter.js"></script>
+<script src="../bower_components/eventie/eventie.js"></script>
+<script src="../bower_components/doc-ready/doc-ready.js"></script>
+<script src="../bower_components/fizzy-ui-utils/utils.js"></script>
+<script src="../bower_components/outlayer/item.js"></script>
+<script src="../bower_components/outlayer/outlayer.js"></script>
+<script src="http://egjs.navercorp.com/0.0.3-rc/dist/eg.js"></script>
+<script src="../src/infiniteGridService.js"></script>
+<script src="./js/data.js"></script>
+<script src="./js/demo.js"></script>
+</body>
+</html>
