@@ -219,6 +219,7 @@ eg.module("infiniteGridService", [window.jQuery, eg, window, document], function
 		 * @ko 상태 저장
 		 * @method eg.InfiniteGridService#store
 		 * @param {String} [key] The type of keys maintained <ko>저장/복원을 위해 관리하는 키</ko>
+		 * @return {Object} instance itself
 		 * @example
 			infiniteGridService.store();
 			infiniteGridService.store("customKey");
@@ -237,12 +238,15 @@ eg.module("infiniteGridService", [window.jQuery, eg, window, document], function
 				this.trigger("beforeStore", data);
 				$.persist(key, data);
 			}
+
+			return this;
 		},
 		/**
 		 * Restores state
 		 * @ko 상태 복원
 		 * @method eg.InfiniteGridService#restore
 		 * @param {String} [key] The type of keys maintained <ko>저장/복원을 위해 관리하는 키</ko>
+		 * @return {Boolean} Determine if state restored
 		 * @example
 			infiniteGridService.restore();
 			infiniteGridService.restore("customKey");
@@ -276,6 +280,7 @@ eg.module("infiniteGridService", [window.jQuery, eg, window, document], function
 		 */
 		clear: function() {
 			this._infiniteGrid.clear();
+			return this;
 		},
 		/**
 		 * Release resources and off custom events

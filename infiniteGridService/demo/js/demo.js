@@ -11,14 +11,21 @@ $(document).ready(function() {
 		var offset = 0;
 
 		if (pos === "first") {
-			offset = $("#grid").children("div").first().data("offset");
+			offset = $("#grid").find(".item").first().data("offset");
 			offset = parseInt(offset, 10) - limit;
 		} else if (pos === "last") {
-			offset = $("#grid").children("div").last().data("offset");
+			offset = $("#grid").find(".item").last().data("offset");
 			offset = parseInt(offset, 10) + 1;
 		}
 		return offset;
 	};
+
+	/*
+	 아이템의 <a> 클릭시 persist 데이터를 저장
+	 */
+	$("#grid").on("click", "a", function() {
+		infiniteGridService.store();
+	});
 
 	/*
 	 "append" 이벤트 핸들러
@@ -57,8 +64,7 @@ $(document).ready(function() {
 	 로딩바 감춤
 	 */
 	infiniteGridService.on("layoutComplete", function(e) {
-		e.isAppend &&
-			$appendLoadingbar.hide() || $prependLoadingbar.hide();
+		e.isAppend ? $appendLoadingbar.hide() : $prependLoadingbar.hide();
 	});
 
 	/*
