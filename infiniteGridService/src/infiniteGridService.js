@@ -30,7 +30,7 @@ eg.module("infiniteGridService", [window.jQuery, eg, window, document], function
 					Math.floor((Math.random() * 100000) + 1);
 
 			this._options = $.extend({
-				count: 240,
+				count: 180,
 				threshold: 300,
 				usePersist: true
 			}, options);
