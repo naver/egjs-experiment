@@ -11,6 +11,7 @@ module.exports = function(grunt) {
 	var jscs = require("./GruntTasks/jscs.js")(grunt);
 	var qunit = require("./GruntTasks/qunit.js")(grunt);
 	var jsdoc = require("./GruntTasks/jsdoc.js")(grunt);
+	var gh_pages = require("./GruntTasks/gh_pages.js")(grunt);
 
 	grunt.initConfig({});
 
@@ -30,6 +31,8 @@ module.exports = function(grunt) {
 		qunit.config(component);
 		//jsdoc.config(component);
 	});
+
+	gh_pages.config(components);
 
 	grunt.registerTask("default", "default tasks", function(oo) {
 		var runTasks;
