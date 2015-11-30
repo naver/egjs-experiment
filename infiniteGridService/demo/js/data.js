@@ -4,7 +4,7 @@ var data = {
 			.map(function(n) {
 				return {
 					offset: offset + n,
-					imgSrc: "./img/" + _.random(1, 50) + ".jpg",
+					imgSrc: "./img/" + (n + 1) + ".jpg",
 					href: "http://naver.com/",
 					desc: "Cras justo odio..."
 				};
