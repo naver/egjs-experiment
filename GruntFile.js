@@ -34,7 +34,7 @@ module.exports = function(grunt) {
 
 	gh_pages.config(components);
 
-	grunt.registerTask("default", "default tasks", function(oo) {
+	grunt.registerTask("default", "default tasks", function() {
 		var runTasks;
 		var target = grunt.option("target");
 
