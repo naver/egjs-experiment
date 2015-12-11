@@ -1,0 +1,32 @@
+{
+	"name": "infiniteGridService",
+	"description": "Useful infinite grid component wrapped egjs.infiniteGrid",
+	"main": "",
+	"authors": [
+		"NAVER corp"
+	],
+	"license": "MIT",
+	"keywords": [
+		"egjs",
+		"javascript"
+	],
+	"ignore": [
+		"**/.*",
+		"node_modules",
+		"bower_components",
+		"test",
+		"tests"
+	],
+	"dependencies": {
+		"jquery": "~1.7.0",
+		"qunit": "~1.17.1",
+		"hammer.js": "~2.0.4",
+		"outlayer": "~1.4.1",
+		"egjs": "~1.0.0"
+	},
+	"devDependencies": {
+		"Bootflat": "~2.0.4",
+		"lodash": "~3.10.1",
+		"handlebars": "~4.0.5"
+	}
+}
