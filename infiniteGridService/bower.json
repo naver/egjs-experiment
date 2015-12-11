@@ -5,7 +5,7 @@
   "authors": [
     "NAVER corp"
   ],
-  "license": "LGPL v2",
+  "license": "MIT",
   "homepage": "",
   "ignore": [
     "**/.*",
@@ -19,7 +19,7 @@
     "qunit": "~1.17.1",
     "hammer.js": "~2.0.4",
     "outlayer": "~1.4.1",
-    "egjs": "https://oss.navercorp.com/egjs/egjs.git#0.0.3"
+    "egjs": "~1.0.0"
   },
   "devDependencies": {
     "Bootflat": "~2.0.4",
