@@ -5,22 +5,10 @@
   "scripts": {
     "test": "grunt"
   },
-  "repository": {
-    "type": "git",
-    "url": "https://oss.navercorp.com/egjs/egjs-experiment"
-  },
-  "bugs": {
-    "url": "https://oss.navercorp.com/egjs/egjs-experiment/issues"
-  },
   "author": "NAVER corp",
-  "licenses": [
-    {
-      "type": "LGPL v2",
-      "url": "https://www.gnu.org/licenses/old-licenses/lgpl-2.0.html"
-    }
-  ],
+  "license": "MIT",
   "devDependencies": {
-    "egjs-jsdoc-template": "git+http://oss.navercorp.com/egjs/egjs-jsdoc-template#master",
+    "egjs-jsdoc-template": "^0.0.2",
     "grunt": "^0.4.5",
     "grunt-contrib-concat": "^0.5.1",
     "grunt-contrib-copy": "^0.8.0",
