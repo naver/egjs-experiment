@@ -18,7 +18,7 @@ module.exports = function(grunt) {
 	var components;
 	//var tasks = ["jshint", "jscs", "qunit", "jsdoc"];
 	var tasks = ["jshint", "jscs", "qunit"];
-	var ignores = [".git", ".idea", "bower_components", "doc", "GruntTasks", "node_modules"];
+	var ignores = [".git", ".idea", "bower_components", "doc", "GruntTasks", "node_modules", ".grunt"];
 
 	components = _.filter(fs.readdirSync(__dirname), function(file) {
 		return _.indexOf(ignores, file) === -1 &&
