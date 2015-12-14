@@ -5,6 +5,8 @@ $(document).ready(function() {
 
 	var $appendLoadingbar = $("#append-loading-bar");
 	var $prependLoadingbar = $("#prepend-loading-bar");
+	var $footer = $(".footer");
+	var $grid = $("#grid");
 	var infiniteGridService = new eg.InfiniteGridService("#grid");
 
 	function getOffset(pos) {
@@ -23,7 +25,7 @@ $(document).ready(function() {
 	/*
 	 아이템의 <a> 클릭시 persist 데이터를 저장
 	 */
-	$("#grid").on("click", "a", function() {
+	$grid.on("click", "a", function() {
 		infiniteGridService.store();
 	});
 
@@ -65,6 +67,9 @@ $(document).ready(function() {
 	 */
 	infiniteGridService.on("layoutComplete", function(e) {
 		e.isAppend ? $appendLoadingbar.hide() : $prependLoadingbar.hide();
+
+		$grid.css("visibility", "visible");
+		$footer.show();
 	});
 
 	/*
