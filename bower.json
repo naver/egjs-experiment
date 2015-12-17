@@ -20,7 +20,8 @@
   ],
   "dependencies": {
     "jquery": "~1.7.0",
-    "qunit": "~1.17.1"
+    "qunit": "~1.17.1",
+    "egjs" : "*"
   },
   "devDependencies": {
     "Bootflat": "~2.0.4",

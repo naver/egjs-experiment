@@ -1,14 +1,9 @@
 $(document).ready(function() {
 	var limit = 60;
-	var source = $("#items-template").html();
-	var template = Handlebars.compile(source);
-
+	var template = Handlebars.compile($("#items-template").html());
 	var $loading = $("#wrap_loading");
-	var $appendLoadingbar = $("#append-loading-bar");
-	var $prependLoadingbar = $("#prepend-loading-bar");
-	var $footer = $(".footer");
 	var $grid = $("#grid");
-	var infiniteGridService = new eg.InfiniteGridService("#grid");
+	var infiniteGridService = new eg.InfiniteGridService($grid);
 
 	function getOffset(pos) {
 		var offset = 0;
@@ -40,7 +35,6 @@ $(document).ready(function() {
 		 응답데이터를 #grid에 append 함
 		 */
 		"append" : function() {
-			$appendLoadingbar.show();
 			var html = template(data.getItems(getOffset("last"), limit));
 			infiniteGridService.append(html);
 		},
@@ -54,7 +48,6 @@ $(document).ready(function() {
 		"prepend" : function() {
 			var offset = getOffset("first");
 			if (offset > 0) {
-				$prependLoadingbar.show();
 				var html = template(data.getItems(offset, limit));
 				infiniteGridService.prepend(html);
 			}
@@ -66,9 +59,7 @@ $(document).ready(function() {
 		 로딩바 감춤
 		 */
 		"layoutComplete" : function(e) {
-			e.isAppend ? $appendLoadingbar.hide() : $prependLoadingbar.hide();
 			$loading.hide();
-			$footer.show();
 		}
 	});
 
