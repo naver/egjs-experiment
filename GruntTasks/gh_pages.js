@@ -3,9 +3,8 @@ var path = require("path");
 
 module.exports = function(grunt) {
 	function config(components) {
-		var targets = [path.join("bower_components/**/*")];
+		var targets = ["bower_components/**/*", "egjs/**/*"];
 		targets =_.reduce(components, function(result, component) {
-			result.push();
 			result.push(path.join(component, "src/**/*"));
 			result.push(path.join(component, "demo/**/*"));
 			return result;
