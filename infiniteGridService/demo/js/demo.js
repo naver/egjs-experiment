@@ -3,6 +3,7 @@ $(document).ready(function() {
 	var source = $("#items-template").html();
 	var template = Handlebars.compile(source);
 
+	var $loading = $("#wrap_loading");
 	var $appendLoadingbar = $("#append-loading-bar");
 	var $prependLoadingbar = $("#prepend-loading-bar");
 	var $footer = $(".footer");
@@ -68,6 +69,7 @@ $(document).ready(function() {
 	infiniteGridService.on("layoutComplete", function(e) {
 		e.isAppend ? $appendLoadingbar.hide() : $prependLoadingbar.hide();
 
+		$loading.hide();
 		$grid.css("visibility", "visible");
 		$footer.show();
 	});
