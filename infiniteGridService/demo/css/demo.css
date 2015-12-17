@@ -1,2 +1,6 @@
 .navbar-inverse{border-radius:0}
 .alert-info{background-color:#E6E9ED}
+#wrap_loading .wrap_icon{
+    padding-top: 4em;
+    text-align:center;
+}
