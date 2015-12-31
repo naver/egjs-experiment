@@ -4,7 +4,7 @@
   "description": "egjs experiment is an online showroom of egjs based experiments.",
   "repository": {
     "type": "git",
-    "url": "https://github.com/egjs/egjs-experiment"
+    "url": "https://github.com/naver/egjs-experiment"
   },
   "author": "NAVER corp",
   "licens": "MIT",

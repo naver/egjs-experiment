@@ -3,7 +3,7 @@
 
 ## All Experiments
 * infiniteGridService (based eg.infiniteGrid)
-    * [documents](https://github.com/egjs/egjs-experiment/tree/master/infiniteGridService)
+    * [documents](https://github.com/naver/egjs-experiment/tree/master/infiniteGridService)
     * [demo](http://naver.github.io/egjs-experiment/infiniteGridService/demo/demo.html)
 
-[![Analytics](https://ga-beacon.appspot.com/UA-70842526-8/egjs-experiment/readme)](https://github.com/egjs/egjs-experiment)
+[![Analytics](https://ga-beacon.appspot.com/UA-70842526-8/egjs-experiment/readme)](https://github.com/naver/egjs-experiment)
